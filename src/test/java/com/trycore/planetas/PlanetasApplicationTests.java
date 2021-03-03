@@ -35,9 +35,9 @@ class PlanetasApplicationTests {
 	@Test
 	public void createPerson() {
 		
-		Optional<Planeta> p = plaRepo.findById(1);
+		Planeta pla = new Planeta("Reach", 0, 32, 5896, "Frio", "Cristalizado");
 		
-		Persona per = new Persona("Jhon 117", 47, 0, p.get(), 225, 135, 'M',
+		Persona per = new Persona("Jhon 117", 47, 0, pla, 225, 135, 'M',
 				LocalDateTime.of(2075, 05, 04, 0, 0));
 		
 		Persona plaAux = perRepo.save(per);
