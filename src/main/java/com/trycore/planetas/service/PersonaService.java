@@ -92,7 +92,7 @@ public class PersonaService {
 			p.setPeso(pesoP);
 			p.setContador(0);
 			p.setSexo(sexo.charAt(0));
-			p.setFecha_nacimiento(fecha_nacimientoP);
+			p.setFechaNacimiento(fecha_nacimientoP);
 			
 			repo.save(p);
 			

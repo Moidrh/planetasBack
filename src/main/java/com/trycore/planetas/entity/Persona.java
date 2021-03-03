@@ -35,12 +35,12 @@ public class Persona {
 	
 	private char sexo;
 	
-	private LocalDateTime fecha_nacimiento;
+	private LocalDateTime fechaNacimiento;
 
 	public Persona() {}
 
 	public Persona(String name, int edad, int contador, Planeta planeta, int estatura, double peso, char sexo,
-			LocalDateTime fecha_nacimiento) {
+			LocalDateTime fechaNacimiento) {
 		this.name = name;
 		this.edad = edad;
 		this.planeta = planeta;
@@ -48,7 +48,7 @@ public class Persona {
 		this.peso = peso;
 		this.contador = contador;
 		this.sexo = sexo;
-		this.fecha_nacimiento = fecha_nacimiento;
+		this.fechaNacimiento = fechaNacimiento;
 	}
 
 	public int getId() {
@@ -103,12 +103,12 @@ public class Persona {
 		this.sexo = sexo;
 	}
 
-	public LocalDateTime getFecha_nacimiento() {
-		return fecha_nacimiento;
+	public LocalDateTime getFechaNacimiento() {
+		return fechaNacimiento;
 	}
 
-	public void setFecha_nacimiento(LocalDateTime fecha_nacimiento) {
-		this.fecha_nacimiento = fecha_nacimiento;
+	public void setFechaNacimiento(LocalDateTime fechaNacimiento) {
+		this.fechaNacimiento = fechaNacimiento;
 	}
 
 	public int getContador() {

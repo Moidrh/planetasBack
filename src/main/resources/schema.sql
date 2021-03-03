@@ -21,7 +21,7 @@ create table `Persona`
 	`peso` integer,
 	`sexo` varchar(1),
 	`contador` integer,
-	`fecha_nacimiento` timestamp,
+	`fechaNacimiento` timestamp,
 	primary key (`id`),
   	CONSTRAINT `planeta_persona` FOREIGN KEY (`planeta_id`) REFERENCES `Planeta` (`planeta_id`)
 );
