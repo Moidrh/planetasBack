@@ -28,10 +28,6 @@ public class PlanetaService {
 		
 		Planeta p = planeta.get();
 		
-		System.out.println("-------------------> PLANET COUNT: " + p.getContador());
-	
-		sumCountPlanet(name);
-		
 		repo.save(p);
 		
 		return p;
@@ -71,7 +67,10 @@ public class PlanetaService {
 		Optional<Planeta> p = repo.findById(idI);
 		
 		if(p.isPresent()) {
-			return p.get();
+			Planeta pl = p.get();
+			sumCountPlanet(pl.getName());
+			repo.save(pl);
+			return pl;
 		}
 		
 		

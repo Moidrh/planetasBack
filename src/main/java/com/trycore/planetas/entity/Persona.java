@@ -39,13 +39,14 @@ public class Persona {
 
 	public Persona() {}
 
-	public Persona(String name, int edad, Planeta planeta, int estatura, double peso, char sexo,
+	public Persona(String name, int edad, int contador, Planeta planeta, int estatura, double peso, char sexo,
 			LocalDateTime fecha_nacimiento) {
 		this.name = name;
 		this.edad = edad;
 		this.planeta = planeta;
 		this.estatura = estatura;
 		this.peso = peso;
+		this.contador = contador;
 		this.sexo = sexo;
 		this.fecha_nacimiento = fecha_nacimiento;
 	}

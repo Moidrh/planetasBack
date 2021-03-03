@@ -76,7 +76,7 @@ public class PersonaService {
 			
 			char sexoAux = sexo.charAt(0);
 			
-			Persona p = new Persona(name, edadP, plaAux, estaturaP, pesoP, sexoAux, fecha_nacimientoP);
+			Persona p = new Persona(name, edadP, 0, plaAux, estaturaP, pesoP, sexoAux, fecha_nacimientoP);
 			
 			int personaP = repo.save(p).getId();
 			
@@ -99,6 +99,22 @@ public class PersonaService {
 			return p.getId();
 		}
 		return 0;
+	}
+
+	public Persona getAPersonById(String id) {
+		
+		int idI = Integer.parseInt(id);
+		
+		Optional<Persona> p = repo.findById(idI);
+		
+		if(p.isPresent()) {
+			Persona pe = p.get();
+			sumCountPerson(pe.getName());
+			repo.save(pe);
+			return pe;
+		}
+		
+		return null;
 	}
 	
 	

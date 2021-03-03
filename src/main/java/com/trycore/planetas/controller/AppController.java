@@ -108,5 +108,14 @@ public class AppController {
 		return planetaService.getAPlanetById(id);
 	}
 	
+	@RequestMapping(value = "getAPersonById", method = RequestMethod.GET)
+	@ResponseStatus(HttpStatus.OK)
+	@CrossOrigin(origins = "http://localhost:4200")
+	@ResponseBody
+	public Persona getAPersonById(@RequestParam(name = "id") String id) {
+		
+		return personaService.getAPersonById(id);
+	}
+	
 	
 }
